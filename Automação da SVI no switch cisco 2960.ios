@@ -1,0 +1,27 @@
+!Aacessando o modo de Configuração Global de comandos
+configure terminal
+
+    !Configuraçaõ do Gateway padrão IPv4 no Switch
+    ip-default-gateway 192.168.1.254
+
+    !Configuração da interface Virtual do Switch SVI (Switch Virtual Interface) para acesso remoto
+    interface vlan 1
+
+      !Configuraçaõ da DEscrição da INterface Virtual 
+      description Interface de Gerenciamento do switch-01
+
+      !Configuraçãoo Do Endereço IPv4 da Interface Virtual
+      ip address 192.168.1.250 255.255.255.0
+
+      !Inicializando a Interface Virtual do switch
+      no shutdown
+
+      !Saindo de todos os níveis e voltando ao modo EXEC Privelegiado
+      end
+
+!Salavando as Configurações da mémoria RAM para á mémoria NVRAM
+!OBSERVAÇÃO IMPORTANTE: deixar uma linha em branco no final do script para
+!Salavar automaticamente o script na hora da execução, fazendo a função de
+!<Enter> no final do script.
+write
+      
